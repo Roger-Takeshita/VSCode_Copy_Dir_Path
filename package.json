@@ -1,0 +1,104 @@
+{
+    "name": "copy-dir-path",
+    "displayName": "Copy Dir Path",
+    "description": "Copy current file dir path",
+    "version": "1.0.0",
+    "publisher": "RogerTakeshita",
+    "engines": {
+        "vscode": "^1.54.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:copy-dir-path.copyRelativePath",
+        "onCommand:copy-dir-path.copyAbsolutePath"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "copy-dir-path.copyAbsolutePath",
+                "title": "Copy Absolute Dir Path",
+                "category": "Copy Dir Path"
+            },
+            {
+                "command": "copy-dir-path.copyRelativePath",
+                "title": "Copy Relative Dir Path",
+                "category": "Copy Dir Path"
+            }
+        ],
+        "menus": {
+            "editor/title/context": [
+                {
+                    "command": "copy-dir-path.copyRelativePath",
+                    "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyAbsolutePath",
+                    "group": "copy-dir-path"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "copy-dir-path.copyRelativePath",
+                    "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyAbsolutePath",
+                    "group": "copy-dir-path"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "copy-dir-path.copyRelativePath",
+                    "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyAbsolutePath",
+                    "group": "copy-dir-path"
+                }
+            ],
+            "commandPalette": [
+                {
+                    "command": "copy-dir-path.copyRelativePath",
+                    "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyAbsolutePath",
+                    "group": "copy-dir-path"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "copy-dir-path.copyRelativePath",
+                "key": "alt+c",
+                "mac": "alt+c",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "npm run lint"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.4",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.54.0",
+        "eslint": "^7.19.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.2.1",
+        "typescript": "^4.1.3",
+        "vscode-test": "^1.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Roger-Takeshita/VSCode_Copy_Dir_Path.git"
+    },
+    "dependencies": {
+        "copy-paste": "^1.1.3"
+    }
+}
