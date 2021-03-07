@@ -1,8 +1,8 @@
 # Copy Dir Path for Visual Studio Code
 
-- Copy the relative / absolute directory path from the current file.
+- Copy relative / absolute directory path from your current file
 
-  ![](images/copy-path.gif)
+  ![](https://media.giphy.com/media/UurDcNnj2XxrVZExuf/giphy.gif)
 
 ## Keybinding
 

@@ -2,7 +2,7 @@
     "name": "copy-dir-path",
     "displayName": "Copy Dir Path",
     "description": "Copy current file dir path",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "RogerTakeshita",
     "engines": {
         "vscode": "^1.54.0"
@@ -10,6 +10,7 @@
     "categories": [
         "Other"
     ],
+    "icon": "images/icon.png",
     "activationEvents": [
         "onCommand:copy-dir-path.copyRelativePath",
         "onCommand:copy-dir-path.copyAbsolutePath"
