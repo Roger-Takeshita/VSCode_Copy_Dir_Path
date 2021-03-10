@@ -2,7 +2,7 @@
     "name": "copy-dir-path",
     "displayName": "Copy Dir Path",
     "description": "Copy current file dir path",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "publisher": "RogerTakeshita",
     "engines": {
         "vscode": "^1.54.0"
@@ -13,7 +13,9 @@
     "icon": "images/icon.png",
     "activationEvents": [
         "onCommand:copy-dir-path.copyRelativePath",
-        "onCommand:copy-dir-path.copyAbsolutePath"
+        "onCommand:copy-dir-path.copyAbsolutePath",
+        "onCommand:copy-dir-path.copyRelativePathTouch",
+        "onCommand:copy-dir-path.copyAbsolutePathTouch"
     ],
     "main": "./extension.js",
     "contributes": {
@@ -26,6 +28,16 @@
             {
                 "command": "copy-dir-path.copyRelativePath",
                 "title": "Copy Relative Dir Path",
+                "category": "Copy Dir Path"
+            },
+            {
+                "command": "copy-dir-path.copyAbsolutePathTouch",
+                "title": "Copy Absolute Dir Path + Touch",
+                "category": "Copy Dir Path"
+            },
+            {
+                "command": "copy-dir-path.copyRelativePathTouch",
+                "title": "Copy Relative Dir Path + Touch",
                 "category": "Copy Dir Path"
             }
         ],
@@ -68,6 +80,14 @@
                 {
                     "command": "copy-dir-path.copyAbsolutePath",
                     "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyRelativePathTouch",
+                    "group": "copy-dir-path"
+                },
+                {
+                    "command": "copy-dir-path.copyAbsolutePathTouch",
+                    "group": "copy-dir-path"
                 }
             ]
         },
@@ -76,6 +96,18 @@
                 "command": "copy-dir-path.copyRelativePath",
                 "key": "alt+c",
                 "mac": "alt+c",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "copy-dir-path.copyRelativePathTouch",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "copy-dir-path.copyAbsolutePath",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "copy-dir-path.copyAbsolutePathTouch",
                 "when": "editorTextFocus"
             }
         ]
